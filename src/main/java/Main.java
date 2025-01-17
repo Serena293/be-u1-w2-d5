@@ -60,5 +60,8 @@ public class Main {
 
         //ricerca per anno
        // archivio.ricercaLibriPerAnno();
+
+        //ricerca per autore
+        archivio.ricercaPerAutore();
     }
 }

@@ -18,7 +18,7 @@ public class Elemento {
     // Metodo per generare un ISBN casuale
     private Long generateRandomIsbn() {
         Random random = new Random();
-        //math.abs per calcolare il vaolre assoluto e non avere valori negativi
+        //math.abs per calcolare il valore assoluto e non avere valori negativi
         return Math.abs(random.nextLong() );
     }
 

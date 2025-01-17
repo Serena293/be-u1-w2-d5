@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Archivio {
@@ -138,6 +139,24 @@ public class Archivio {
 
         if (!trovato) {
             System.out.println("Nessun libro trovato per l'anno " + anno);
+        }
+    }
+
+    public void ricercaPerAutore(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Inserisci nome autore");
+        String nomeAutore = scanner.nextLine();
+
+        boolean trovato = false;
+        //ciclo per cercare tutti i libri filtrati per autore
+        for (Libro libro : libri){
+            if(Objects.equals(libro.getAutore(), nomeAutore)){
+                System.out.println(libro);
+                trovato =true;
+            }
+        }
+        if(!trovato){
+            System.out.println("Nessun libro scritto da " + nomeAutore + " è stato trovato");
         }
     }
 }
